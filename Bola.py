@@ -1,35 +1,34 @@
-""" Classe Bola: Crie uma classe que modele uma bola:
+"""Classe Quadrado: Crie uma classe que modele um quadrado:
 
-Atributos: Cor, circunferência, material
-Métodos: trocaCor e mostraCor """
+Atributos: Tamanho do lado
+Métodos: Mudar valor do Lado, Retornar valor do Lado e calcular Área;"""
 
 
-class Bola:
-    def __init__(self, cor, raio, material):
-        self.cor = cor
-        self._raio = raio
-        self.circunferencia = 2 * raio * 3.14
-        self.material = material
+class Quadrado:
 
+    def __init__(self, lado, unidade):
+        self._lado = float(lado)
+        self._area = lado**2
+        self._unidade = unidade.lower()
 
     def __str__(self):
-        return f'Cor: {self.cor}, Circunferencia: {round(self.circunferencia)} m, Material: {self.material}'
+        return 'Lado: {} {}, Area: {:.2f}'.format(self._lado,self._unidade,self._area)
 
-    def __eq__(self, other):
-        return self.circunferencia == other.circunferencia and self.cor == other.cor and self.material == other.material
+    def change_lado(self, novo_lado):
+        self._lado = float(novo_lado)
+        self._area = self._lado**2
 
-    def trocaCor(self, cor):
-        self.cor = cor
+    def retorna_valor_lado(self):
+        return self._lado
 
-    def mostraCor(self):
-        return f'Cor: {self.cor}'
+    def calcula_area(self):
+        return "{:.2f}".format(self._area)
 
-bola = Bola('verde', 5, 'borracha')
+quad = Quadrado(8, 'MeTroS')
+quad.change_lado(8.99)
 
-bola2 = Bola('verde', 5, 'borracha')
+area_do_quad = quad.calcula_area()
+lado_do_quad = quad.retorna_valor_lado()
 
-print(bola == bola2)
+print(quad)
 
-bola2.trocaCor('azul')
-
-bola2.mostraCor()
