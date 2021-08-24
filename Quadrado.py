@@ -30,4 +30,4 @@ quad.change_lado(8.99)
 area_do_quad = quad.calcula_area()
 lado_do_quad = quad.retorna_valor_lado()
 
-print('funcionou TESTEASD SADSA ')
+print('FUNCIOUNOU PORRA')
