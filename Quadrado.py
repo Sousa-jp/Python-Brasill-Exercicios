@@ -31,4 +31,3 @@ area_do_quad = quad.calcula_area()
 lado_do_quad = quad.retorna_valor_lado()
 
 print(quad)
-

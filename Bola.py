@@ -18,10 +18,10 @@ class Bola:
     def __eq__(self, other):
         return self.circunferencia == other.circunferencia and self.cor == other.cor and self.material == other.material
 
-    def trocaCor(self, cor):
+    def troca_cor(self, cor):
         self.cor = cor
 
-    def mostraCor(self):
+    def mostra_cor(self):
         return f'Cor: {self.cor}'
 
 bola = Bola('verde', 5, 'borracha')
@@ -30,6 +30,6 @@ bola2 = Bola('verde', 5, 'borracha')
 
 print(bola == bola2)
 
-bola2.trocaCor('azul')
+bola2.troca_cor('azul')
 
-bola2.mostraCor()
+bola2.mostra_cor()
